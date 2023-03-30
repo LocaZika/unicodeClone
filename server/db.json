@@ -1,0 +1,15 @@
+{
+  "users": [
+    {"id": 1, "username": "admin", "password": "admin", "name": "Administrator"}
+  ],
+  "faq": [
+    {
+      "id": 1,
+      "title": "Question 1",
+      "content": "Test Question 1",
+      "comments": [
+        {"id": 1, "userID": 1, "comment": "answer question 1"}
+      ]
+    }
+  ]
+}
