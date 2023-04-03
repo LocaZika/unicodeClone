@@ -35,6 +35,7 @@ export default function Login() {
       email: state.email,
       password: state.password
     };
+    console.log(loginData);
     post('login', loginData).then(({res, data}) => {
       if (res.status === 200){
         localStorage.setItem('token', data.accessToken);

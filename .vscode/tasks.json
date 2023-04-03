@@ -6,7 +6,7 @@
     {
       "label": "run server",
       "type": "shell",
-      "command": "cd server && json-server db.json -w -p 2207"
+      "command": "cd server && json-server-auth -w -p 2207 db.json"
     }
   ]
 }
