@@ -12,6 +12,7 @@
 }
 %d-grid{
   display: grid;
+  grid-template-columns: repeat(12, auto);
 }
 @mixin flex($content, $items) {
   @extend %d-flex;
@@ -36,4 +37,15 @@
 %pseudo {
   content: ' ';
   @extend %pos-abs;
+}
+%glass-effect {
+  border-radius: .5rem;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+  border: 0.1rem solid rgba(255, 255, 255, 0.8);
+};
+@mixin glassy($opacity, $blur) {
+  @extend %glass-effect;
+  background: rgba(255, 255, 255, $opacity);
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
 }

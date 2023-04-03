@@ -1,0 +1,29 @@
+@import '../../scss/params';
+header{
+  background-color: #333344;
+  @include flex(space-between, center);
+  @include glassy(0.2, 0.5rem);
+  grid-column: span 12;
+  padding: 0 2rem;
+  margin: 2rem;
+  a{
+    color: #fff;
+  }
+}
+.logo{
+  svg g:nth-child(1){
+    fill: #f8f8f8;
+  }
+}
+.header-features{
+  &__links{
+    @extend %d-flex;
+    gap: 1rem;
+    font-size: 1.6rem;
+    .notification{
+      svg path{
+        fill: #fff;
+      }
+    }
+  }
+}
