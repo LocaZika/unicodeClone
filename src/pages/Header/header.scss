@@ -25,5 +25,46 @@ header{
         fill: #fff;
       }
     }
+    .user{
+      @extend %pos-rel;
+      overflow: hidden;
+      &-img, &-name{
+        @extend %d-inline;
+      }
+      &-img{
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        background-color: #cccccc;
+        @extend %pos-rel;
+        >svg{
+          @extend %pos-abs;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      &-name{
+        vertical-align: super;
+      }
+      &-feature{
+        @extend %pos-abs;
+        top: 100%;
+        left: -150%;
+        width: 15rem;
+        visibility: hidden;
+        >li{
+          @include glassy(0.5, 0.2rem);
+          padding: 0.5rem 1rem;
+          border: none;
+          border-radius: 0;
+        }
+      }
+      &:hover{
+        .user-feature{
+          visibility: visible;
+        }
+      }
+    }
   }
 }

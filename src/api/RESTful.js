@@ -8,7 +8,7 @@ const send = async (path, method, dataBody, token) => {
     },
     body: JSON.stringify(dataBody) ?? null,
   });
-  const data = res.json();
+  const data = await res.json();
   return { res, data };
 };
 export const get = (path) => {

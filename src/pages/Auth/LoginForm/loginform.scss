@@ -2,7 +2,7 @@
 .login-form {
   @include flex(center, center);
   flex-direction: column;
-  width: 20%;
+  width: 50%;
   height: 100%;
   label {
     @include flex(space-around, center);
@@ -54,7 +54,7 @@
 
   .form-group {
     @extend %pos-rel;
-    height: 50%;
+    height: 70%;
     width: 100%;
     overflow: hidden;
     form {

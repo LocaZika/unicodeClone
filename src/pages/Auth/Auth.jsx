@@ -3,5 +3,5 @@ import { useAuth } from '../../hooks';
 
 export default function Auth() {
   const [{isLogin}] = useAuth();
-  return isLogin === true ? <Outlet /> : <Navigate to={'./login'} />
+  return isLogin === true ? <Outlet /> : <Navigate to={'/login'} />
 }

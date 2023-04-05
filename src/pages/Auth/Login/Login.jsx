@@ -35,11 +35,10 @@ export default function Login() {
       email: state.email,
       password: state.password
     };
-    console.log(loginData);
     post('login', loginData).then(({res, data}) => {
       if (res.status === 200){
         localStorage.setItem('token', data.accessToken);
-        dispatch(login({email: state.email}));
+        dispatch(login({email: data.user.email, name: data.user.name}));
       }
       // else{
       //   setLogin({...login, error: {...login.error, loginError: 'Account not found'}});
@@ -48,7 +47,7 @@ export default function Login() {
   }
   return (
     <form onSubmit={handleSubmit} className="form-login">
-      <input type="email" placeholder='Username' onChange={handleEmailChange} />
+      <input type="email" placeholder='Email' onChange={handleEmailChange} />
       <input type="password" placeholder='Password' onChange={handlePasswordChange} />
       <button type="submit">Login</button>
     </form>

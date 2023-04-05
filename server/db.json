@@ -1,6 +1,11 @@
 {
   "users": [
-    {"id": 1, "email": "admin@mail.com", "password": "admin", "name": "Administrator"}
+    {
+      "email": "admin@mail.com",
+      "password": "$2a$10$aKyNMXFPy7Z2ABy2/6r/NOHCOdOFwaP9cvHgNidBYiM5Se2Jte9oG",
+      "name": "Admin",
+      "id": 1
+    }
   ],
   "faq": [
     {
@@ -8,7 +13,11 @@
       "title": "Question 1",
       "content": "Test Question 1",
       "comments": [
-        {"id": 1, "userID": 1, "comment": "answer question 1"}
+        {
+          "id": 1,
+          "userID": 1,
+          "comment": "answer question 1"
+        }
       ]
     }
   ]
