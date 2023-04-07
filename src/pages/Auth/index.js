@@ -1,5 +1,5 @@
 // Auth index
-export { authSlice } from "./authSlice";
+export { authSlice } from "../../redux/authSlice";
 export { default as Auth } from "./Auth";
 export { Login } from "./Login";
 export { LoginLink } from "./LoginLink";

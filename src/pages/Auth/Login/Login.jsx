@@ -2,7 +2,7 @@ import { useState } from "react";
 import { debounce } from "../../../services";
 import { post } from "../../../api";
 import { useAuth } from "../../../hooks";
-import { authSlice } from "../authSlice";
+import { authSlice } from "../../../redux/authSlice";
 
 export default function Login() {
   const [state, setstate] = useState({

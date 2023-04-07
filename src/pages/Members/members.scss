@@ -1,0 +1,24 @@
+@import '../../scss/params';
+.members{
+  li{
+    @include flex(null, center);
+    padding: 2rem;
+    border: 0.1rem solid #000;
+    border-radius: 1rem;
+    background-color: rgba($color: #ffffff, $alpha: 0.7);
+    >div{
+      @extend %d-inline;
+    }
+    .member-img{
+      @include flex(center, center);
+      margin-right: 2rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: #aaaaaa;
+    }
+    .member-name{
+      font-size: 1.6rem;
+    }
+  }
+}
